@@ -23,7 +23,7 @@ body {
 .loginAndRegBox .reg-box {
   display: none;
 }
-.loginAndRegBox #form_login {
+.loginAndRegBox .form {
   padding: 0 30px;
 }
 .loginAndRegBox .links {
