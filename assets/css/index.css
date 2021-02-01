@@ -24,7 +24,7 @@ a {
   line-height: 60px;
 }
 .userInfo img {
-  margin-left: 40px;
+  margin-left: 28px;
 }
 .fontAvatar {
   display: inline-block;
@@ -33,7 +33,7 @@ a {
   line-height: 40px;
   text-align: center;
   margin-right: 10px;
-  margin-left: 18px;
+  margin-left: 25px;
   background-color: #049387;
   border-radius: 50%;
 }
