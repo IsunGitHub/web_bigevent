@@ -13,8 +13,7 @@ $(function(){
   })
 
   //设置layui的自定义把表单验证
-  var form = layui.form
-  form.verify({
+  layui.form.verify({
     pwd:[
       /^[\S]{6,12}$/
       ,'密码必须6到12位，且不能出现空格'
@@ -33,7 +32,7 @@ $(function(){
     var data = {username:$("#form_reg [name=username]").val(),password:$("#form_reg [name=password]").val()}
     $.ajax({
       method:"POST",
-      url:"http://ajax.frontend.itheima.net/api/reguser",
+      url:"/api/reguser",
       data,
       success(res) {
         if(res.status !== 0) {
@@ -50,7 +49,7 @@ $(function(){
     e.preventDefault()
     $.ajax({
       method:"POST",
-      url:"http://ajax.frontend.itheima.net/api/login",
+      url:"/api/login",
       data:$(this).serialize(),
       success(res) {
         if(res.status !== 0) {
@@ -58,7 +57,7 @@ $(function(){
         }
         layer.msg("登录成功")
         localStorage.setItem("token",res.token)
-        location.href = "/index.html"    
+        location.href = "/index.html"  
       }
     })
   })
