@@ -20,15 +20,15 @@ function initEditor() {
     //工具栏的补丁按钮
     toolbar:
       'insertfile undo redo | \
-       styleselect | \
-       bold italic | \
-       alignleft aligncenter alignright alignjustify | \
-       bullist numlist outdent indent | \
-       image | \
-       preview | \
-       forecolor emoticons |\
-       codesample fontsizeselect |\
-       imageupload',
+      styleselect | \
+      bold italic | \
+      alignleft aligncenter alignright alignjustify | \
+      bullist numlist outdent indent | \
+      image | \
+      preview | \
+      forecolor emoticons |\
+      codesample fontsizeselect |\
+      imageupload',
     //字体大小
     fontsize_formats: '10pt 12pt 14pt 18pt 24pt 36pt',
     //按tab不换行
