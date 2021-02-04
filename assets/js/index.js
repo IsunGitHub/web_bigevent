@@ -41,4 +41,9 @@ function renderUserInfo(user) {
   }
 }
 
+//跳转到发布文章
+function hrefArtPub() {
+  $("iframe").prop("src","/article/artPub.html")
+}
+
 

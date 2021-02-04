@@ -13,6 +13,23 @@
       <div>文章类别管理</div>
     </div>
     <div class="layui-card-body">
+      <form class="layui-form">
+        <div class="layui-form-item layui-input-inline">
+          <select name="cate_id">
+          </select>
+        </div>
+        <div class="layui-form-item layui-input-inline">
+          <select name="state">
+            <option value="">所有状态</option>
+            <option value="已发布">已发布</option>
+            <option value="草稿">草稿</option>
+          </select>
+        </div>
+        <div class="layui-form-item layui-input-inline">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">筛选</button>
+        </div>
+      </form>
+
       <table class="layui-table">
         <colgroup>
           <col>
@@ -34,9 +51,13 @@
           
         </tbody>
       </table>
+
+      <div id="pageBox"></div>
+
     </div>
   </div>
 
+  <!-- 文章列表 -->
   <script type="text/html" id="tpl-artList">
     {{each data}}
     <tr>
@@ -46,9 +67,17 @@
       <td>{{$value.state}}</td>
       <td>
         <button type="button" class="layui-btn layui-btn-xs" id="editCate">编辑</button>
-        <button type="button" class="layui-btn layui-btn-xs layui-btn-danger" id="deleteBtn">删除</button>
+        <button data-id="{{$value.Id}}" type="button" class="layui-btn layui-btn-xs layui-btn-danger" id="deleteBtn">删除</button>
       </td>
     </tr>
+    {{/each}}
+  </script>
+
+  <!-- 筛选所有分类 -->
+  <script type="text/html" id="tpl-filtrate">
+    <option value="">所有分类</option>
+    {{each data}}
+      <option value="{{$value.Id}}">{{$value.name}}</option>
     {{/each}}
   </script>
 </body>

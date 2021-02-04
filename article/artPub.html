@@ -24,7 +24,7 @@
         <div class="layui-form-item">
           <label class="layui-form-label">文章类别</label>
             <div class="layui-input-block">
-              <select name="city" lay-verify="required">
+              <select name="cate_id" lay-verify="required">
               </select>
             </div>
         </div>
@@ -57,8 +57,10 @@
            </div>
         </div>
         <div class="layui-form-item">
-          <button type="button" class="layui-btn">发布</button>
-          <button type="button" class="layui-btn layui-btn-primary">存为草稿</button>
+          <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">发布</button>
+            <button type="reset" class="layui-btn layui-btn-primary" id="btnSave">存为草稿</button>
+          </div>
         </div>
       </form>
     </div>
